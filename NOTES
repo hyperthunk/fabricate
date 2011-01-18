@@ -1,0 +1,103 @@
+
+=-- Getting started --=
+
+Fabricate is intended to facilitate various day to day software engineering tasks.
+
+-=- Fabricate as a Search and Indexing tool -=-
+
+Two of the fundamental commands Fabricate offers are `search' and `index' which
+both support numerous predicates, modifiers and options with which to customise
+the actions performed by the program. Most of the "useful" functionality offered
+by Fabricate depends on these features to locate and software in your development
+environment.
+
+-=- Fabricate as a Package Manager -=-
+
+Fabricate can be used as a basic package manager on most unix based systems. It
+is not a replacement for other OS package managers (apt, yum, etc) but provides
+a platform agnostic wrapper around these. In addition to wrapping standard OS
+package managers, Fabricate can download software packages from remote locations,
+unpack and install them for you. These 'remote locations' can range from links
+on the web, to revision control systems, and even to other kinds of 'custom
+artefact repository' (if such things present themselves in your own development
+environment, as they do with some build tools).
+
+Fabricate is aware of a variety of packager managers for common target environments
+so your Haskell dependencies are installed with cabal-install, Java libraries
+with maven, Ruby modules with RubyGems, Python code with easy_install and so on.
+You can easily override these default tools by telling Fabricate about your
+preferred choice instead. In fact, "telling Fabricate about your preferred choice"
+is the very essence of how Fabricate works. 
+
+-=- Fabricate as a Build Tool -=-
+
+Fabricate can also help building polyglot software projects and implementing
+systems where the unix philosophy (of building lots of little tools to do
+specific jobs) can be seen in earnest. If you're sticking with one technology
+then the build support Fabricate offers probably won't be of much interest to you.
+
+Fabricate in no way tries to replace any existing build tool(s). Instead, a set of
+commands are made available which will execute the appropriate build tool based on
+the kind of project Fabricate is looking at. In some cases, no build/configuration
+setup is neccessary whatsoever for example when building your own Erlang projects,
+build customizations notwithstanding, http://hg.basho.com/rebar is used by default.
+Because this tool doesn't require any build files unless you're customizing things,
+your project can remain free of build configuration altogether! This approach will
+work for some other providers too.
+
+As always, you can always tell Fabricate to do something 'unusual' for a particular
+project or replace the general build mechanism for whole categories of projects if
+you wish.
+
+-=- Fabricate as a Configuration Management Tool -=-
+
+Fabricate can generate all sorts of useful data to simplify your day job. Some
+examples include project skeletons, build files, configuration data, release
+notes, change lists (driven from VCS revision histories) and many more. If there
+is some data/configuration that you'd like Fabricate to be able to generate
+which isn't there by default, you can tell Fabricate about this so it can generate
+what you want thereafter.
+
+Fabricate can also be integrated with sysadmin configuration tools in order to
+generate and manage system wide configuration. A couple of the forms this might take
+are integration with Chef and/or Puppet. You can tell Fabricate about your own off
+the shelf or in house tools, whether these are complex packaged applications or
+simple scripts and cron jobs. 
+
+-=- Fabricate as a Deployment Tool -=-
+
+Fabricate can be used as a deployment tool as well. Out of the box, this facility is
+based on integration with Capistrano, the Ruby deployment framework. Fabricate can
+not only run capsitrano deployments, but can automatically generate and configure
+application specific deployments scripts (and recipies), plugins and other code that
+can be used by capistrano, as well as documentation about your target deployment
+environments.
+
+-=- Fabricate as a Software Analysis Tool -=-
+
+Fabricate offers some limited integration with static and runtime analysis tools, such
+as code coverage, profiling and tracing libraries. 
+
+-=- Fabricate as a Testing Tool -=-
+
+Fabricate offers some support for software testing. This really falls into three
+categories:
+
+1. Running unit and integration test suites (incorporating multiple projects
+built in disparate technologies).
+
+Fabricate can run your unit (and embedded integration) tests using the same standard
+tools that are delegated to when building and installing software from source. I
+probably don't need to mention that you can tell Fabricate about your own, unique
+testing tools and/or scenarios by now.
+
+Fabricate is also integrated with some common integration testing tools, such as
+Tsung, JMeter, Axiom and a few others.
+
+2. Gathering, collating and presenting metrics from test suites.
+
+Fabricate can be used to "glue together" the results of multiple test suites with
+differing output formats. You have complete control over the final results and
+as always, the process is highly configurable. Fabricate also ships with a simple,
+lightweight web server that provides access to these results over HTTP.
+

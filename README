@@ -1,0 +1,24 @@
+A 'build tool' to facilitate better managing the process of 
+software builds, releases, installations, deployments and configuration.
+
+The Fabricate Tao:
+
+* Plug & Play
+* Don't reinvent the wheel
+* Use "best of breed" tools as a default
+* Providing a common infrastructure then get out of the way
+
+Fabricate does
+
+- help to build, release, install & deploy a wide range of technologies
+- standardise configuration management in a way that makes sense for your project
+- provide simple mechanisms for extensibility
+
+Fabricate might
+
+- be a pain to run on Microsoft Windows
+
+Fabricate will not
+
+- replace your build system
+- get in the way of simple scripting tasks
